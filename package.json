@@ -3,9 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lodash": "^4.17.15",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.10",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-redux": "^7.1.0",
+    "react-router": "^5.0.1",
+    "react-router-bootstrap": "^0.25.0",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.4",
+    "truffle": "^5.0.29",
+    "truffle-hdwallet-provider": "^1.0.15",
+    "web3": "^1.0.0-beta.15"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Potlab Icons</title>
+        <style>
+                div {
+                        margin-top: 10%;
+                        margin-left: 50%;
+                }
+
+                svg {
+                        text-align: center;
+                        margin: auto;
+                        width: 100px;
+                        height: 100px;
+                }
+
+                #icon-cart {
+                        -webkit-animation-name: sliding;
+                        animation-name: sliding;
+                        -webkit-animation-duration: 2s;
+                        animation-duration: 2s;
+                        -webkit-animation-iteration-count: infinite;
+                        animation-iteration-count: infinite;
+                        -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.04, 1.04);
+                        animation-timing-function: cubic-bezier(0.42, 0, 0.04, 1.04);
+                }
+
+                @-webkit-keyframes sliding {
+                        0% {
+                                margin-left: -1000px;
+                                -webkit-transform: rotate(10deg);
+                                transform: rotate(10deg);
+                        }
+
+                        25% {
+                                -webkit-transform: rotate(0deg);
+                                transform: rotate(0deg);
+                        }
+
+                        50% {
+                                -webkit-transform: rotate(40deg);
+                                transform: rotate(40deg);
+                        }
+
+                        75% {
+                                -webkit-transform: rotate(40deg);
+                                transform: rotate(40deg);
+                                -webkit-animation-timing-function: linear;
+                                animation-timing-function: linear;
+                        }
+
+                        100% {
+                                left: 300px;
+                        }
+                }
+
+                @keyframes sliding {
+                        0% {
+                                margin-left: -1000px;
+                                -webkit-transform: rotate(10deg);
+                                transform: rotate(10deg);
+                        }
+
+                        25% {
+                                -webkit-transform: rotate(0deg);
+                                transform: rotate(0deg);
+                        }
+
+                        50% {
+                                -webkit-transform: rotate(40deg);
+                                transform: rotate(40deg);
+                        }
+
+                        75% {
+                                -webkit-transform: rotate(40deg);
+                                transform: rotate(40deg);
+                                -webkit-animation-timing-function: linear;
+                                animation-timing-function: linear;
+                        }
+
+                        100% {
+                                left: 300px;
+                        }
+                }
+        </style>
+</head>
+
+<body>
+        <div>
+                <svg id="icon-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.31 47.82">
+                        <g>
+                                <circle style="fill:none;stroke:#2a2a31;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px;"
+                                        cx="18.95" cy="44.14" r="2.18" />
+                                <circle style="fill:none;stroke:#2a2a31;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px;"
+                                        cx="42.95" cy="44.14" r="2.18" />
+                                <path style="fill:none;stroke:#2a2a31;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px;"
+                                        d="M1.5,1.5h8.73l5.85,29.21a4.36,4.36,0,0,0,4.36,3.51H41.65A4.36,4.36,0,0,0,46,30.71L49.5,12.41H12.41" />
+                                <rect style="fill:#ea3970;" x="25" y="17" width="16" height="8" />
+                        </g>
+                </svg>
+        </div>
+</body>
+
+</html>

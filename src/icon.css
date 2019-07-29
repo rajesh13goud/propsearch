@@ -1,0 +1,80 @@
+div {
+  margin-top: 10%;
+  margin-left: 50%;
+}
+
+svg {
+  text-align: center;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+}
+
+#icon-cart {
+  -webkit-animation-name: sliding;
+  animation-name: sliding;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.04, 1.04);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.04, 1.04);
+}
+
+@-webkit-keyframes sliding {
+  0% {
+    margin-left: -1000px;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    left: 300px;
+  }
+}
+
+@keyframes sliding {
+  0% {
+    margin-left: -1000px;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    left: 300px;
+  }
+}

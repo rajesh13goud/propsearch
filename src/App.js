@@ -1,26 +1,58 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import Logo from './icon.svg';
+import logo from "./fan-solid.svg";
+import "./App.css";
+import MainNav from "./components/NavBar";
+import Header from "./components/Header";
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      isLoading: false,
+      showLogin: false,
+      showSignup: false,
+      showSell: false
+    };
+  }
+  componentDidUpdate(nextProps, nextState) {
+    if (this.props.userId !== nextProps.userId) {
+      this.setState({ showLogin: false, showSignup: false, showSell: false });
+    }
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+  onClick = () => {
+    setTimeout(() => {
+      this.setState({
+        isLoading: true
+      });
+    }, 6000);
+  };
+
+  render() {
+    const { isLoading } = this.state;
+    if (isLoading) {
+      return (
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <img src={logo} className="App-logo center" alt="logo" />
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      );
+    }
+    return (
+      <div className="App">
+        <MainNav
+          onLoginClicked={() =>
+            this.setState({
+              showLogin: true
+            })
+          }
+          userId={this.props.userId}
+          onLogoutClicked={this.props.logout}
+        />
+        <div>{this.props.userId ? <Header /> : null}</div>
+        <button onClick={this.onClick} />
+      </div>
+    );
+  }
 }
 
 export default App;
